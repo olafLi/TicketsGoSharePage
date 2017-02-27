@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+    background-color: #f2f2f2;
+}
+
+.floor-bottom {
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.head {
+    background-color: #333333;
+    color: white;
+}
+
+.download button {
+    background-color: #f44336;
+    width: 100%;
+    height: 40px;
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-width: 0px;
+    border: 0px solid white;
+    font-size: 16px;
+    color: white;
+}
+
+.download button:hover {
+    background-color: #f44336;
+    font-size: 16px;
+    color: white;
+}
+
+.box {
+    margin: 15px;
+}
+
+.main-img {
+    width: 150px;
+    height: 200px;
+    border: 0px solid black;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+}
+
+#main-title {
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.area {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.blur {
+    /*filter: url(../img/img.svg#blur);*/
+    /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(5px);
+    /* Chrome, Opera */
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+    /* IE6~IE9 */
+}

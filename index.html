@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/share.css">
+</head>
+
+<body >
+    <div class="container" id="app">
+        <!-- 顶部图片区域 -->
+        <div class="row head">
+            <!-- 标题 -->
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <p id="main-title" style="padding:15px;">{{title}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 活动图片 -->
+                <div class="col-xs-5" align="right">
+                    <div class="box main-img">
+                        <img src="" v-bind:src="img"/>
+                    </div>
+                </div>
+                <!-- 活动简单介绍 -->
+                <div class="col-xs-7" align="left">
+                    <div class="box">
+                        <h5 class="text-left">{{title}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 想看按钮 -->
+        <div class="row" style="background-color: white;">
+            <div style="margin-top:20px; margin-bottom:20px;" align="center">
+                <button class="btn btn-default">
+                    <img src="img/like.png" alt="喜欢" style="margin:0px 10px 0px;">想看</button>
+            </div>
+        </div>
+        <!-- 时间and 场馆 -->
+        <div class="row area">
+            <!-- 时间 -->
+            <div class="content" style="margin:20px 5px 10px;">
+                <div>
+                    <div class="col-xs-3">
+                        <p class="text-right">时间:</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p class="text-left">{{time}}</p>
+                    </div>
+                </div>
+                <!-- 场馆 -->
+                <div>
+                    <div class="col-xs-3">
+                        <p class="text-right">场馆:</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p class="text-left">{{place}}</p>
+                        <p class="text-left">
+                            {{address}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 活动详情 -->
+        <div class="row area">
+            <div class="col-xs-12">
+                <div class="detail_title">
+                    <h4>活动详情</h4>
+                </div>
+                <div class="activity_detail" style="font-size: 14px;">
+                    <p>{{detail}}</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin:40px;"></div>
+    </div>
+    <footer class="floor-bottom">
+        <div class="download">
+            <button class="btn btn-default" id="go-download">前往下载</button>
+        </div>
+    </footer>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    $("#go-download").click(function() {
+        alert("download");
+    });
+
+    $(document).ready(function() {
+        var app = new Vue({
+            el: '#app',
+            data: {
+                title: "初音未来2016中国盐城会上海站",
+                detail: "微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博微博发文博",
+                time: '2017-01-05-2017-05-05',
+                place: '上海体育馆',
+                address: "松江区林湖路888号上海欢乐谷华侨城--大剧院",
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488780071&di=4a597da9a0e074f61a09c849683bf285&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1112%2F29%2Fc2%2F10087294_10087294_1325133605031_mthumb.jpg"
+
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
